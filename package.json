@@ -2,9 +2,10 @@
   "name": "crud-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://oDangDinhLuan.github.io/crud-react/",
+  "homepage": "https://luanbkap1903.github.io/luanbkap1903.github.io",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.31",
+    "@fortawesome/free-brands-svg-icons": "^5.15.1",
     "@fortawesome/free-solid-svg-icons": "^5.15.0",
     "@fortawesome/react-fontawesome": "^0.1.11",
     "@testing-library/jest-dom": "^4.2.4",
@@ -12,6 +13,8 @@
     "@testing-library/user-event": "^7.1.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-paginate": "^6.5.0",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3"
   },
   "scripts": {

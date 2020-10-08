@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+/*hover*/
+tr td.btn-acction {
+  display: none;
+}
+
+tr:hover > td.btn-acction {
+  display: block;
+}
