@@ -31,7 +31,7 @@ export default class SiteBar extends Component {
                 </Link>
               </li>
               <li className="tm-nav-item">
-                <a href="post.html" className="tm-nav-link">
+                <a href="/profile/profile.html" className="tm-nav-link">
                   Profile
                 </a>
               </li>
