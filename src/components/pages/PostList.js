@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import data from '../data/data';
+import postsData from '../data/data';
 import PostItem  from '../atoms/PostItem';
 import ReactPaginate from 'react-paginate';
 
@@ -15,7 +15,6 @@ export default class PostList extends Component {
   }
 
   receivedData() {
-    const postsData = data;
     const slice = postsData.slice(this.state.offset, this.state.offset + this.state.perPage);
     const postData = slice.map( post => <PostItem post={post} key={post.id}/> );
     this.setState({
