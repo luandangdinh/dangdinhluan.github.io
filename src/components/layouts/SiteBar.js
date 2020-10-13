@@ -43,17 +43,11 @@ export default class SiteBar extends Component {
             </ul>
           </nav>
           <div className="tm-mb-65">
-            <a rel="nofollow" href="https://fb.com/templatemo" className="tm-social-link">
+            <a rel="nofollow" href="https://www.facebook.com/dang.luan.9083/" className="tm-social-link">
                 <FontAwesomeIcon icon={["fab", "facebook"]}/>
             </a>
-            <a href="https://twitter.com" className="tm-social-link">
-                <FontAwesomeIcon icon={["fab", "twitter"]}/>
-            </a>
-            <a href="https://instagram.com" className="tm-social-link">
-                <FontAwesomeIcon icon={["fab", "instagram"]}/>
-            </a>
-            <a href="https://linkedin.com" className="tm-social-link">
-                <FontAwesomeIcon icon={["fab", "linkedin"]}/>
+            <a href="#" className="tm-social-link">
+                <FontAwesomeIcon icon={["fab", "skype"]}/>
             </a>
           </div>
           <p className="tm-mb-80 pr-5 text-white">

@@ -60,5 +60,59 @@
       &emsp;return &lt;h1>Hello, Stranger.&lt;/h1&gt;;
     }
   </pre>
+
+  <h2>Các thuộc tính với JSX</h2>
+  <p>Bạn có thể sử dụng dấu nháy kép để chỉ định ký tự chuỗi làm thuộc tính</p>
+  <pre>const element = &lt;div tabIndex="0"&gt;&lt;/div&gt;;</pre>
+  <p>Bạn cũng có thể sử dụng dấu {} để nhứng biểu thức JavaScript vào một thuộc tính như sau:</p>
+  <pre>const element = &lt;img src={user.avatarUrl}/&gt;;</pre>
+  <p>Bạn không thể sử dụng dấu nháy kép bao quanh dấu {} khi nhúng biểu thức vào thuộc tính. Bạn nên sử dụng dấu nháy kép cho giá trị là chuỗi và dấu {} cho biểu thức</p>
+  <div class="danger">
+    <p><strong>Warning:</strong> Vì JSX gần với JavaScript hơn HTML, nên ReactDOM sử dụng quy ước đặt tên thuộc tính là camelCase thay vì tên thuộc tính trong HTML. Ví dụ như class trong HTML thì JSX dùng là className.</p>
+  </div>
+
+  <h2>JSX ngăn chặn tấn công Injection</h2>
+  <p>Thật an toàn khi nhúng đầu vào của người dùng vào JSX:</p>
+  <pre>
+    const title = response.potentiallyMaliciousInput;
+    // This is safe:
+    const element = &lt;h1&gt;{title}&lt;/h1&gt;;
+  </pre>
+  <p>Theo mặc định, React DOM sẽ escapes giá trị nào được nhúng trong JSX trước khi hiển thị chúng.Do đó, nó đảm bảo rằng bạn không báo giờ có thể đưa vào bất kỳ thứ gì không được viết rõ ràng vào ứng dụng của mình. Mọi thứ được chuyển đổi thành chuỗi trước khi được hiển thị. Điều này giúp ngăn chặn các cuộc tấn công XSS.</p>
+
+  <h2>JSX đại diện cho các đối tượng</h2>
+  <p>Babel biên dịch JSX thành các cuộc gọi React.createElement(). Hai ví dụ sau giống hệt nhau.</p>
+  <pre>
+    const element = (
+      &emsp;&lt;h1 className="greeting"&gt;
+        &emsp;&emsp;Hello, world!
+      &emsp;&lt;/h1&gt;
+    );
+  </pre>
+
+  <pre>
+    const element = React.createElement(
+      &emsp;'h1',
+      &emsp;{className: 'greeting'},
+      &emsp;'Hello, world!'
+    );
+  </pre>
+
+  <p><code>React.createElement()</code> thực hiện một số kiểm tra giúp bạn viết mã không có lỗi nhưng về cơ bản nó tạo ra đối tượng như sau:</p>
+  <pre>
+    // Note: this structure is simplified
+    const element = {
+      &emsp;type: 'h1',
+      &emsp;props: {
+        &emsp;&emsp;className: 'greeting',
+        &emsp;&emsp;children: 'Hello, world!'
+      &emsp;}
+    };
+  </pre>
+  <p>Những đối tượng này được gọi là "React elements". Bạn có thể coi chúng là mô tả về những gì bạn muốn xem trên màn hình. React đọc các đối tượng này và sử dụng chúng để xây dựng DOM và cập nhật nó. Chúng ta sẽ khám phá việc render phần tử React vào DOM trong phần tiếp theo.</p>
+  <div class="danger">
+    <p><strong>Tip:</strong> Chúng ta được khuyên là nên sử dụng định nghĩa ngôn ngữ Babel cho trình soạn thảo mà bạn chọn để cả mã ES6 và JSX đều được hiển thị tốt nhất.</p>
+  </div>
+  <p>Bài tiếp theo chúng ta cùng tìm hiểu <a href="#/post/4">Rendering Elements</a></p>
 </body>
 </html>
