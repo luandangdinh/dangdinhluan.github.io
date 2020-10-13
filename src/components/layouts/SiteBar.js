@@ -57,7 +57,7 @@ export default class SiteBar extends Component {
             </a>
           </div>
           <p className="tm-mb-80 pr-5 text-white">
-            LuanBkap Blog là nơi chia sẻ kiến thức IT. Website được sử dụng hoàn toàn bằng reactjs và html
+            LuanBkap Blog là nơi ôn lại kiến thức của bản thân
           </p>
         </div>
       </header>

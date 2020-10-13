@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>Hãy cùng nhau xem xét cách khai báo biến sau:</p>
+  <pre>const element = &lt;h1&gt;Hello, world!&lt;/h1&gt;;</pre>
+  <p>Cú pháp này không phải là một chuỗi hay một HTML. Nó được gọi là JSX và nó là một phần từ mở rộng cú pháp cho JavaScript. Chúng tôi khuyên bạn nên sử dụng nó với React để mô tả giao diện người dùng. JSX có thể nhắc bạn về một template language, nhưng nó đi kèm với toàn bộ sức mạnh của JavaScript.</p>
+  <p>JSX tạo ra các "elements" React. Chúng ta sẽ khám phá việc kết xuất chúng với DOM trong bài tiếp theo. Ở đây, bạn có thể tìm thấy những điều cơ bản về JSX cần thiết để bắt đầu.</p>
+
+  <h2>Tại sao lại là JSX?</h2>
+  <p>React chấp nhận một thực tế rằng logic hiển thị vốn được kết hợp với logic giao diện người dùng khác: Cách các sự kiện được xử lý, trạng thái thay đổi như thế nào theo thời gian và cách các dữ liệu được chuẩn bị để hiển thị.</p>
+  <p>Thay vì phân tách các công nghệ một cách giả tạo bằng việc đặt đánh dấu và logic vào các tệp riêng biệt, React phân tách các mối quan tâm bằng các đơn vị được kết hợp lỏng lẻo gọi là "components". Chúng ta sẽ nói về "components" trong phần tiếp theo.</p>
+  <p>React không bắt buộc sử dụng JSX, nhưng phần lớn mọi người đều thấy nó hữu ích như một công cụ hỗ trợ trực quan khi làm việc với giao diện người dùng bên trong code JavaScript. Nó cũng cho phép React hiển thị các thông báo lỗi và cảnh báo hữu ích hơn.</p>
+
+  <h2>Nhúng biểu thức trong JSX</h2>
+  <p>Trong ví dụ sau, chúng ta khai báo một biến <code>name</code> và sử dụng nó trong JSX bằng cách đặt nó trong dấu ngoặc xoắn {}.</p>
+
+  <pre>
+    const name = 'Josh Perez';
+    const element = &lt;h1&gt;Hello, {name}&lt;/h1&gt;;
+
+    ReactDOM.render(
+      &emsp;element,
+      &emsp;document.getElementById('root')
+    );
+  </pre>
+  <p>Bạn có thể đặt bất kỳ các biểu thức hợp lệ bên trong dấu {}. Trong ví dụ tiếp theo chúng ta sẽ thử nhúng giá trị của việc gọi một Function xem thế nào nhé.</p>
+  <pre>
+    function formatName(user) {
+      &emsp;return user.firstName + ' ' + user.lastName;
+    }
+
+    const user = {
+      &emsp;firstName: 'Harper',
+      &emsp;lastName: 'Perez'
+    };
+
+    const element = (
+      &emsp;&lt;h1&gt;Hello, {formatName(user)}!&lt;/h1&gt;
+    );
+
+    ReactDOM.render(
+      &emsp;element,
+      &emsp;document.getElementById('root')
+    );
+  </pre>
+  <p>Thật tuyệt, kết quả ra đúng <a href="https://codepen.io/pen?&editable=true&editors=0010" target="_blank">Codepen</a>. Mặc dù không bắt buộc nhưng khi thực hiện việc này chúng ta vẫn nên đặt nó trong dấu ngoặc đơn để tránh việc tự động chèn dấu chấm phẩy</p>
+
+  <h2>JSX cũng là biểu thức</h2>
+  <p>Sau khi biên dịch, các biểu thức JSX sẽ trở thành các lệnh gọi hàm JavaScript thông thường. Điều này có nghĩa là bạn có thể sử dụng JSX bên trong các câu lệnh if và vòng lặp for, gán nó cho các biến, chấp nhận nó dưới dạng đối số và trả về nó từ các hàm.</p>
+  <pre>
+    function getGreeting(user) {
+      &emsp;if (user) {
+        &emsp;&emsp;return &lt;h1&gt;Hello, {formatName(user)}!&lt;/h1&gt;;
+      }
+      &emsp;return &lt;h1>Hello, Stranger.&lt;/h1&gt;;
+    }
+  </pre>
+</body>
+</html>
