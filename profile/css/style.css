@@ -6588,7 +6588,7 @@ nav {
       float: left;
       display: block;
       overflow: visible;
-      width: 11%; }
+      width: 12%; }
     .flexnav li a {
       border-bottom: none; }
     .flexnav li > ul {
@@ -6695,7 +6695,7 @@ footer {
 
 /* Base
 	----------------------------------*/
-/*	Button style 
+/*	Button style
 ------------------------*/
 .rex-primary-btn, .rex-primary-btn-effect, .rex-primary-btn-effect-No, .rex-btn-background-effect, .rex-btn-Nobackground-effect, .rex-btn-background-effect-No, .rex-primary-btn-No {
   font-size: 18px;
