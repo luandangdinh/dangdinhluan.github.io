@@ -99,7 +99,12 @@ function moveH (obj) {
 
   // One Page Nav
   $('#navigation-menu').onePageNav({
-    scrollThreshold: 0.8
+    currentClass: 'current',
+    changeHash: false,
+    scrollSpeed: 750,
+    scrollThreshold: 0.5,
+    filter: '',
+    easing: 'swing'
   });
 
 
