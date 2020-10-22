@@ -1,9 +1,17 @@
 import React, { Component } from "react";
 import postsData from '../data/data';
+import Disqus from "disqus-react";
 
 export default class PostDetail extends Component {
   render() {
     const post = postsData.find(x => x.id === parseInt(this.props.match.params.id));
+    const disqusShortname = "luanbkap-blog"
+    const disqusConfig = {
+      url: "http://localhost:3000",
+      identifier: "article-id",
+      title: "LuanBkap Blog"
+    }
+
     return (
       <div className="row tm-row">
         <div className="col-12">
@@ -16,6 +24,10 @@ export default class PostDetail extends Component {
               <div className="post-content" dangerouslySetInnerHTML={{__html: post.content.join('\n')}} />
               <span className="d-block text-right tm-color-primary">Created by LuanBkap Blog</span>
             </div>
+            <Disqus.DiscussionEmbed
+              shortname={disqusShortname}
+              config={disqusConfig}
+            />
           </div>
         </div>
       </div>

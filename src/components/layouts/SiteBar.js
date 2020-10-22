@@ -35,18 +35,13 @@ export default class SiteBar extends Component {
                   Profile
                 </a>
               </li>
-              <li className={`tm-nav-item ${curentSiteBar === "contact" ? 'active' : ''}`} onClick={() => this.handleClickSiteBar("contact")}>
-                <Link to="/contact" className="tm-nav-link">
-                  Contact Us
-                </Link>
-              </li>
             </ul>
           </nav>
           <div className="tm-mb-65">
             <a rel="nofollow" href="https://www.facebook.com/dang.luan.9083/" className="tm-social-link">
                 <FontAwesomeIcon icon={["fab", "facebook"]}/>
             </a>
-            <a href="#" className="tm-social-link">
+            <a href="https://www.facebook.com/dang.luan.9083/" className="tm-social-link">
                 <FontAwesomeIcon icon={["fab", "skype"]}/>
             </a>
           </div>

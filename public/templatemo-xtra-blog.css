@@ -559,6 +559,12 @@ a:hover figcaption { color: #056767; }
     }
 
     .tm-contact-right { padding-left: 15px; }
+
+    .tm-post-link img { height: auto; }
+
+    .tm-pt-60 { padding-top: 10px; }
+
+    .tm-post { margin-bottom: 20px }
 }
 
 @media (max-width: 575px) {
