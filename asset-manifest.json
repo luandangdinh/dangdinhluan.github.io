@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/luanbkap1903.github.io/static/css/main.e90635fe.chunk.css",
-    "main.js": "/luanbkap1903.github.io/static/js/main.a50ce868.chunk.js",
-    "main.js.map": "/luanbkap1903.github.io/static/js/main.a50ce868.chunk.js.map",
+    "main.js": "/luanbkap1903.github.io/static/js/main.697ef3a8.chunk.js",
+    "main.js.map": "/luanbkap1903.github.io/static/js/main.697ef3a8.chunk.js.map",
     "runtime-main.js": "/luanbkap1903.github.io/static/js/runtime-main.5844a902.js",
     "runtime-main.js.map": "/luanbkap1903.github.io/static/js/runtime-main.5844a902.js.map",
     "static/js/2.bbedd808.chunk.js": "/luanbkap1903.github.io/static/js/2.bbedd808.chunk.js",
     "static/js/2.bbedd808.chunk.js.map": "/luanbkap1903.github.io/static/js/2.bbedd808.chunk.js.map",
     "index.html": "/luanbkap1903.github.io/index.html",
-    "precache-manifest.0b76f00bcbd66022ccb67e73c1d43e12.js": "/luanbkap1903.github.io/precache-manifest.0b76f00bcbd66022ccb67e73c1d43e12.js",
+    "precache-manifest.28a1db141041dc5ce7c266da53de7d2e.js": "/luanbkap1903.github.io/precache-manifest.28a1db141041dc5ce7c266da53de7d2e.js",
     "service-worker.js": "/luanbkap1903.github.io/service-worker.js",
     "static/css/main.e90635fe.chunk.css.map": "/luanbkap1903.github.io/static/css/main.e90635fe.chunk.css.map",
     "static/js/2.bbedd808.chunk.js.LICENSE.txt": "/luanbkap1903.github.io/static/js/2.bbedd808.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.5844a902.js",
     "static/js/2.bbedd808.chunk.js",
     "static/css/main.e90635fe.chunk.css",
-    "static/js/main.a50ce868.chunk.js"
+    "static/js/main.697ef3a8.chunk.js"
   ]
 }
