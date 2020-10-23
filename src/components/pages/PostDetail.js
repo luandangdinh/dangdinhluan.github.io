@@ -7,9 +7,9 @@ export default class PostDetail extends Component {
     const post = postsData.find(x => x.id === parseInt(this.props.match.params.id));
     const disqusShortname = "luanbkap-blog"
     const disqusConfig = {
-      url: "http://localhost:3000",
-      identifier: "article-id",
-      title: "LuanBkap Blog"
+      url: window.location.href,
+      identifier: post.id,
+      title: post.title
     }
 
     return (
