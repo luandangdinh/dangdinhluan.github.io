@@ -605,3 +605,8 @@ a:hover figcaption { color: #056767; }
   border-left: 6px solid #f44336;
   padding: 0 10px;
 }
+
+ul.post-ul {
+    padding: 0 0px 0 40px;
+    color: #999;
+}
